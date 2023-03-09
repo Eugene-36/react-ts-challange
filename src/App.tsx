@@ -57,7 +57,7 @@ function App() {
           </div>
         </>
       ) : (
-        <SuccessForm num={num} />
+        <SuccessForm num={num} length={values.length} />
       )}
     </div>
   );
