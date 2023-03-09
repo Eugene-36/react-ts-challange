@@ -1,0 +1,98 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  text-align: left;
+  background: #1f2630;
+  padding: 20px;
+  width: 24em;
+  height: 350px;
+  border-radius: 1.6em;
+  margin: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 13px 27px -5px hsl(240deg 30% 28% / 25%),
+    0 8px 16px -8px hsl(0deg 0% 0% / 30%), 0 -6px 16px -6px hsl(0deg 0% 0% / 3%);
+  transition: all ease 200ms;
+}
+
+.card h3 {
+  color: #fcffff;
+  margin-top: -0.2em;
+  line-height: 1.4;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease-in 100ms;
+}
+.card p {
+  color: #777d87;
+  margin: 0 0 15px 0;
+}
+.card ul {
+  list-style: none;
+}
+.card ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.card ul li:not(:last-child) {
+  margin: 0 15px 0 0;
+}
+.card ul li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  color: #808892;
+
+  border-radius: 56px;
+  background: #262f38;
+}
+.card button {
+  transition: 0.3s;
+  margin: 30px 0 0 0;
+  cursor: pointer;
+  background: rgb(252, 134, 0);
+  color: white;
+  width: 100%;
+  height: 38px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+.card button:hover {
+  background: white;
+  color: #ffa558;
+}
+.card ul li div {
+  transition: 0.3s;
+}
+.card ul li div:hover {
+  background: #7c8898;
+  color: white;
+}
+.card ul li.active div {
+  background: #fc7613;
+  color: white;
+}
+.thankCard {
+  align-items: center;
+}
+.thankCard div {
+  background: #262f38;
+  color: #7f4018;
+  padding: 10px;
+  border-radius: 19px;
+}
+
+.thankCard div + p {
+  color: #fbfeff;
+  font-size: 25px;
+  margin: 25px 0 15px 0;
+}
