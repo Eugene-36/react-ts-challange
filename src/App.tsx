@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SuccessForm from './components/SuccessForm';
+import ReactLogo from './assets/icon-star.svg';
 import style from './style.module.css';
 
 function App() {
@@ -28,25 +29,30 @@ function App() {
       {!isAllowed ? (
         <>
           <div className={style.card}>
+            <div className={style.star}>
+              <img src={ReactLogo} alt='' />
+            </div>
             <h3>How did we do?</h3>
             <p>
               Please let us know how did with your support request. All feedback
               is appreciated to help us improve our offering!
             </p>
-            <ul>
-              {values.map(({ id, text }) => (
-                <li
-                  key={id}
-                  onClick={(e) => {
-                    setActiveId(id);
-                    handleClick(e);
-                  }}
-                  className={activeId === id ? style.active : ''}
-                >
-                  <div>{text}</div>
-                </li>
-              ))}
-            </ul>
+            <div className={style.listItems}>
+              <ul>
+                {values.map(({ id, text }) => (
+                  <li
+                    key={id}
+                    onClick={(e) => {
+                      setActiveId(id);
+                      handleClick(e);
+                    }}
+                    className={activeId === id ? style.active : ''}
+                  >
+                    <div>{text}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <button
               disabled={num <= 0 ? true : false}
               onClick={(e) => hnadleSubmit(e)}

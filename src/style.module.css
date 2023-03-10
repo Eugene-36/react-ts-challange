@@ -10,7 +10,7 @@
   height: 350px;
   border-radius: 1.6em;
   margin: 1em;
-  overflow: hidden;
+
   cursor: pointer;
   box-shadow: 0 13px 27px -5px hsl(240deg 30% 28% / 25%),
     0 8px 16px -8px hsl(0deg 0% 0% / 30%), 0 -6px 16px -6px hsl(0deg 0% 0% / 3%);
@@ -23,7 +23,7 @@
   line-height: 1.4;
   font-size: 1.3em;
   font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
+
   transition: all ease-in 100ms;
 }
 .card p {
@@ -35,20 +35,23 @@
 }
 .card ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
 }
+.card .listItems {
+  width: 100%;
+}
 .card ul li:not(:last-child) {
-  margin: 0 15px 0 0;
+  margin: 0 25px 0 0;
 }
 .card ul li div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   color: #808892;
 
   border-radius: 56px;
@@ -86,13 +89,60 @@
 }
 .thankCard div {
   background: #262f38;
-  color: #7f4018;
+  color: hsl(25, 97%, 53%);
   padding: 10px;
   border-radius: 19px;
+}
+.thankCard .mainTitle {
+  font-weight: 700;
+  font-size: 27px;
 }
 
 .thankCard div + p {
   color: #fbfeff;
-  font-size: 25px;
+
   margin: 25px 0 15px 0;
+}
+.card .star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 0 25px 0;
+
+  border-radius: 50px;
+  background: #262f38;
+}
+.thankCard img {
+  margin: 0 0 25px 0;
+}
+.thankCard p {
+  text-align: center;
+}
+@media screen and (max-width: 562px) {
+  .card ul li:not(:last-child) {
+    margin: 0 10px 0 0;
+  }
+  .card button {
+    width: 100%;
+  }
+  .App {
+    padding: 0 15px 0 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .card {
+    width: 100%;
+  }
+  .card ul li div {
+    width: 40px;
+    height: 40px;
+  }
+  .card ul {
+    justify-content: space-between;
+  }
+  .thankCard img {
+    width: 125px;
+  }
 }
